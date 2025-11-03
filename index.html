@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg rounded rounded-3" id="restaurantNavbar">
+      <div class="container-fluid px-3">
+       <h2 class="navbar-brand mb-0 fw-bold" id="brandLogo">
+         <span class="brand-icon">🍽️</span> FoodStack
+       </h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="d-flex justify-content-center mx-auto" role="search">
+           <form class="d-flex justify-content-center" role="search">
+            <input
+              class="form-control search-input me-2"
+              type="search"
+              placeholder="Search delicious food..."
+              aria-label="Search"
+            />
+            <button class="btn search-btn" type="submit">
+              <span>🔍</span> 
+            </button>
+          </form>
+         </div>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About Us</a>
+            </li>
+            <li class="nav-item dropdown nav-link-active">
+              <a
+                class="nav-link dropdown-toggle hover "
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-lg" id="servicesDropdown">
+                <li><a class="dropdown-item" href="#"><span class="me-2">🚚</span>Cash-On Delivery</a></li>
+                <li><a class="dropdown-item" href="#"><span class="me-2">💳</span>Online Payment</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#"><span class="me-2">📞</span>Dial us on +91 7348239840</a>
+                </li>
+              </ul>
+            </li>
+         
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Carousel section for displaying images of delicious food and all  -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/thali.jpg" class="d-block w-100" alt="Indian Thali">
+      <div class="carousel-caption">
+        <h5>Authentic Indian Thali</h5>
+        <p>Traditional Indian cuisine with regional delicacies</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/franchise.png" class="d-block w-100" alt="Fresh Burgers">
+      <div class="carousel-caption">
+        <h5>Franchise World</h5>
+        <p>Premium burgers and pizzas with signature sauces</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/chicken-biryani-awadhi-01.jpg" class="d-block w-100" alt="Chicken Biryani">
+      <div class="carousel-caption">
+        <h5>Biryani Empire</h5>
+        <p>Authentic biryani with fragrant spices and tender meat!!!</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<br />
+
+<div class="main-section container-fluid py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Explore Our Menu</h2>
+    <div class="menu-tabs ">
+      <ul class="nav nav-tabs justify-content-center border-0 mb-4" id="myTab" role="tablist">
+        <li class="nav-item " role="presentation">
+          <button class="nav-link active rounded rounded-pill" id="veg-tab" data-bs-toggle="tab" data-bs-target="#veg-pane" type="button" role="tab" aria-controls="veg-pane" aria-selected="true">Veg</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded rounded-pill" id="nonveg-tab" data-bs-toggle="tab" data-bs-target="#nonveg-pane" type="button" role="tab" aria-controls="nonveg-pane" aria-selected="false">Non-Veg</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded rounded-pill" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts-pane" type="button" role="tab" aria-controls="desserts-pane" aria-selected="false">Desserts &amp; Sides</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded rounded-pill" id="burgers-tab" data-bs-toggle="tab" data-bs-target="#burgers-pane" type="button" role="tab" aria-controls="burgers-pane" aria-selected="false">Burgers</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded rounded-pill" id="pizzas-tab" data-bs-toggle="tab" data-bs-target="#pizzas-pane" type="button" role="tab" aria-controls="pizzas-pane" aria-selected="false">Pizzas</button>
+        </li>
+      </ul>
+
+      <div class="tab-content p-4 rounded-4 shadow-sm bg-white" id="myTabContent">
+        <div class="tab-pane fade show active" id="veg-pane" role="tabpanel" aria-labelledby="veg-tab" tabindex="0">
+          <p class="lead text-muted mb-0">This page is for veg items.</p>
+        </div>
+        <div class="tab-pane fade" id="nonveg-pane" role="tabpanel" aria-labelledby="nonveg-tab" tabindex="0">
+          <p class="lead text-muted mb-0">This page is for non-veg items.</p>
+        </div>
+        <div class="tab-pane fade" id="desserts-pane" role="tabpanel" aria-labelledby="desserts-tab" tabindex="0">
+          <p class="lead text-muted mb-0">This page is for desserts and sides.</p>
+        </div>
+        <div class="tab-pane fade" id="burgers-pane" role="tabpanel" aria-labelledby="burgers-tab" tabindex="0">
+          <p class="lead text-muted mb-0">This page is for burgers.</p>
+        </div>
+        <div class="tab-pane fade" id="pizzas-pane" role="tabpanel" aria-labelledby="pizzas-tab" tabindex="0">
+          <p class="lead text-muted mb-0">This page is for pizzas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="footer-section">
+  <div class=""footer-content text-center py-4 bg-dark text-white">
+    <p class="mb-0"><marquee>&copy; 2024 FoodStack. All rights reserved.</marquee></p>
+  </div>
+</div>
+
+    <style>
+      /* Import Google Fonts for elegant typography */
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #fdfbfb 0%, #f8f4f1 100%);
+        min-height: 100vh;
+      }
+
+      /* Modern Restaurant Navbar with Gradient */
+      #restaurantNavbar {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+        padding: 0.75rem 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      /* Brand Logo Styling */
+      #brandLogo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: #ffffff !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+      }
+
+      #brandLogo:hover {
+        transform: scale(1.02);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .brand-icon {
+        font-size: 1.5rem;
+        display: inline-block;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+
+      /* Navbar Toggler */
+      .navbar-toggler {
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        padding: 0.5rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.3);
+      }
+
+      /* Search Input Styling */
+      .search-input {
+        max-width: 280px;
+        border-radius: 40px;
+        padding: 0.5rem 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.95);
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        height: 38px;
+      }
+
+      .search-input:focus {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        border-color: #fff;
+        background: #ffffff;
+        transform: scale(1.01);
+      }
+
+      .search-input::placeholder {
+        color: #999;
+        font-style: italic;
+        font-size: 0.85rem;
+      }
+
+      /* Search Button */
+      .search-btn {
+        background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+        color: white;
+        border: none;
+        border-radius: 40px;
+        padding: 0.5rem 1.3rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        font-size: 0.9rem;
+        height: 38px;
+      }
+
+      .search-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(135deg, #19547b 0%, #ffd89b 100%);
+      }
+
+      /* Navigation Links */
+      .nav-link {
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9) !important;
+        margin-right: 0.3rem;
+        padding: 0.5rem 0.9rem !important;
+        transition: all 0.3s ease;
+        position: relative;
+        border-radius: 6px;
+        font-size: 0.95rem;
+      }
+
+      .nav-link:hover {
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-1px);
+      }
+
+      /* Underline animation for nav links (not dropdown) */
+      .nav-link:not(.dropdown-toggle)::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        left: 50%;
+        bottom: 4px;
+        background: linear-gradient(90deg, #ffd89b, #fff);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+        border-radius: 1px;
+      }
+
+      .nav-link:not(.dropdown-toggle):hover::after {
+        width: 70%;
+      }
+
+      /* Active nav link */
+      .nav-link.active {
+        background: rgba(255, 255, 255, 0.2);
+        font-weight: 600;
+      }
+
+      /* Dropdown Toggle Styling */
+      .dropdown-toggle {
+        display: flex;
+        align-items: center;
+      }
+
+      .dropdown-toggle::after {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+        border-top-color: rgba(255, 255, 255, 0.9);
+      }
+
+      .dropdown-toggle:hover::after,
+      .dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(180deg);
+      }
+
+      /* Dropdown Menu */
+      .dropdown-menu {
+        min-width: 240px;
+        border: none;
+        border-radius: 12px;
+        padding: 0.4rem;
+        margin-top: 0.8rem !important;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        animation: slideDown 0.3s ease;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Dropdown Items */
+      .dropdown-item {
+        padding: 0.6rem 1.2rem;
+        transition: all 0.3s ease;
+        color: #333;
+        font-weight: 500;
+        border-radius: 8px;
+        margin: 0.15rem 0;
+        font-size: 0.9rem;
+      }
+
+      .dropdown-item:hover {
+        background: linear-gradient(135deg, #ff6b6b 0%, #c44569 100%);
+        color: white !important;
+        transform: translateX(8px);
+        box-shadow: 0 3px 12px rgba(255, 107, 107, 0.25);
+      }
+
+      .dropdown-item span {
+        font-size: 1.1rem;
+      }
+
+      /* Dropdown Divider */
+      .dropdown-divider {
+        margin: 0.5rem 0;
+        border-top: 1px solid #ffe0e0;
+        opacity: 0.6;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .search-input {
+          max-width: 250px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        #restaurantNavbar {
+          padding: 0.6rem 0;
+        }
+
+        #brandLogo {
+          font-size: 1.3rem;
+        }
+
+        .brand-icon {
+          font-size: 1.3rem;
+        }
+
+        .search-input {
+          max-width: 100%;
+          margin-bottom: 0.8rem;
+          height: 40px;
+        }
+
+        .search-btn {
+          height: 40px;
+          padding: 0.6rem 1.4rem;
+        }
+
+        .navbar-nav {
+          padding-top: 0.8rem;
+          text-align: center;
+        }
+
+        .nav-link {
+          margin-bottom: 0.4rem;
+          margin-right: 0.2rem;
+          padding: 0.6rem 1rem !important;
+          display: inline-block;
+          width: auto;
+        }
+
+        .dropdown-menu {
+          margin-top: 0.4rem !important;
+          min-width: 220px;
+        }
+
+        .dropdown-item {
+          padding: 0.7rem 1rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #restaurantNavbar {
+          padding: 0.5rem 0;
+        }
+
+        #brandLogo {
+          font-size: 1.2rem;
+        }
+
+        .brand-icon {
+          font-size: 1.2rem;
+        }
+
+        .search-input {
+          height: 38px;
+          font-size: 0.85rem;
+        }
+
+        .search-btn {
+          height: 38px;
+          padding: 0.5rem 1.2rem;
+          font-size: 0.85rem;
+        }
+
+        .nav-link {
+          padding: 0.5rem 0.8rem !important;
+          font-size: 0.9rem;
+        }
+
+        .dropdown-menu {
+          min-width: 200px;
+          border-radius: 10px;
+        }
+
+        .dropdown-item {
+          padding: 0.6rem 0.9rem;
+          font-size: 0.8rem;
+        }
+
+        .dropdown-item span {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        #restaurantNavbar {
+          padding: 0.4rem 0;
+        }
+
+        #brandLogo {
+          font-size: 1.1rem;
+        }
+
+        .brand-icon {
+          font-size: 1.1rem;
+        }
+
+        .search-input {
+          height: 36px;
+          padding: 0.4rem 1rem;
+          font-size: 0.8rem;
+        }
+
+        .search-btn {
+          height: 36px;
+          padding: 0.4rem 1rem;
+          font-size: 0.8rem;
+        }
+
+        .nav-link {
+          padding: 0.4rem 0.7rem !important;
+          font-size: 0.85rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .dropdown-menu {
+          min-width: 180px;
+          padding: 0.3rem;
+        }
+
+        .dropdown-item {
+          padding: 0.5rem 0.8rem;
+          font-size: 0.75rem;
+        }
+
+        .dropdown-item span {
+          font-size: 0.9rem;
+        }
+
+        .navbar-toggler {
+          padding: 0.4rem;
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .search-input::placeholder {
+          font-size: 0.75rem;
+        }
+
+        .search-btn span {
+          display: none;
+        }
+
+        .search-btn {
+          padding: 0.4rem 0.8rem;
+          min-width: 40px;
+        }
+
+        .nav-link {
+          padding: 0.4rem 0.6rem !important;
+          font-size: 0.8rem;
+        }
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Modern Food Carousel Styling */
+      #carouselExampleCaptions {
+        margin-top: 0;
+        border-radius: 0 0 25px 25px;
+        overflow: hidden;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        position: relative;
+      ;
+        margin-left: auto;
+        margin-right: auto;
+        background: #000;
+      }
+
+      /* Carousel Images */
+      .carousel-item img {
+        height: 65vh;
+        min-height: 400px;
+        object-fit: cover;
+        filter: brightness(0.85) contrast(1.1);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        width: 100%;
+      }
+
+      .carousel-item.active img {
+        filter: brightness(0.95) contrast(1.15);
+        transform: scale(1.03);
+      }
+
+      /* Carousel Captions */
+      .carousel-caption {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 1.5rem 2rem;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        animation: captionSlideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      @keyframes captionSlideUp {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+      .carousel-caption h5 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+      }
+
+      .carousel-caption p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        font-style: italic;
+      }
+
+      /* Carousel Indicators */
+      .carousel-indicators {
+        bottom: 2.5rem;
+        margin-bottom: 0;
+        z-index: 10;
+      }
+
+      .carousel-indicators button {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.4);
+        margin: 0 10px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+
+      .carousel-indicators button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        transform: scale(1.1);
+      }
+
+      .carousel-indicators button.active {
+        background: linear-gradient(135deg, #ffd89b 0%, #ff6b6b 100%);
+        border-color: #ffffff;
+        transform: scale(1.3);
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
+      }
+
+      /* Carousel Controls */
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 2.5rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(15px);
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        background: linear-gradient(135deg, rgba(255, 107, 107, 0.9) 0%, rgba(196, 69, 105, 0.9) 100%);
+        transform: translateY(-50%) scale(1.15);
+        box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+        border-color: rgba(255, 255, 255, 0.6);
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 22px;
+        height: 22px;
+        filter: invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        transition: all 0.3s ease;
+      }
+
+      .carousel-control-prev:hover .carousel-control-prev-icon,
+      .carousel-control-next:hover .carousel-control-next-icon {
+        transform: scale(1.1);
+      }
+
+      /* Food-themed overlay patterns */
+      #carouselExampleCaptions::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(circle at 15% 85%, rgba(255, 107, 107, 0.08) 0%, transparent 45%),
+          radial-gradient(circle at 85% 15%, rgba(255, 216, 155, 0.08) 0%, transparent 45%),
+          linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .carousel-item {
+        position: relative;
+        z-index: 2;
+      }
+
+      .carousel-caption {
+        z-index: 4;
+      }
+
+      .carousel-indicators,
+      .carousel-control-prev,
+      .carousel-control-next {
+        z-index: 5;
+      }
+
+      /* Responsive Carousel */
+      @media (max-width: 1400px) {
+        #carouselExampleCaptions {
+          max-width: 1100px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        #carouselExampleCaptions {
+          max-width: 1000px;
+        }
+
+        .carousel-item img {
+          height: 60vh;
+        }
+
+        .carousel-caption h5 {
+          font-size: 1.6rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 991px) {
+        #carouselExampleCaptions {
+          max-width: 100%;
+          border-radius: 0 0 20px 20px;
+        }
+
+        .carousel-item img {
+          height: 55vh;
+          min-height: 350px;
+        }
+
+        .carousel-caption {
+          padding: 1.2rem 1.5rem;
+          bottom: 1rem;
+          max-width: 85%;
+        }
+
+        .carousel-caption h5 {
+          font-size: 1.4rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.85rem;
+          line-height: 1.3;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 55px;
+          height: 55px;
+          margin: 0 1.5rem;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 18px;
+          height: 18px;
+        }
+
+        .carousel-indicators {
+          bottom: 2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .carousel-item img {
+          height: 45vh;
+          min-height: 280px;
+        }
+
+        .carousel-caption {
+          padding: 1rem 1.2rem;
+          bottom: 0.8rem;
+          max-width: 90%;
+        }
+
+        .carousel-caption h5 {
+          font-size: 1.2rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.8rem;
+          line-height: 1.3;
+        }
+
+        .carousel-indicators {
+          bottom: 1.5rem;
+        }
+
+        .carousel-indicators button {
+          width: 12px;
+          height: 12px;
+          margin: 0 8px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 50px;
+          height: 50px;
+          margin: 0 1rem;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .carousel-item img {
+          height: 40vh;
+          min-height: 220px;
+        }
+
+        .carousel-caption {
+          padding: 0.8rem 1rem;
+          bottom: 0.5rem;
+          max-width: 95%;
+        }
+
+        .carousel-caption h5 {
+          font-size: 1.1rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.75rem;
+          line-height: 1.2;
+        }
+
+        .carousel-indicators {
+          bottom: 1.2rem;
+        }
+
+        .carousel-indicators button {
+          width: 10px;
+          height: 10px;
+          margin: 0 6px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 45px;
+          height: 45px;
+          margin: 0 0.8rem;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .carousel-item img {
+          height: 35vh;
+          min-height: 180px;
+        }
+
+        .carousel-caption {
+          padding: 0.6rem 0.8rem;
+          bottom: 0.3rem;
+        }
+
+        .carousel-caption h5 {
+          font-size: 1rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.7rem;
+        }
+
+        .carousel-indicators {
+          bottom: 1rem;
+        }
+
+        .carousel-indicators button {
+          width: 8px;
+          height: 8px;
+          margin: 0 4px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 40px;
+          height: 40px;
+          margin: 0 0.5rem;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .carousel-caption h5 {
+          font-size: 0.9rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.65rem;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 35px;
+          height: 35px;
+          margin: 0 0.3rem;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    </style>
+
+    <!-- Clean Modern Main-section styling -->
+    <style>
+      /* Main section with soft pastel background */
+      .main-section { 
+        background: linear-gradient(to bottom, #fef3f2 0%, #ffffff 50%, #eff6ff 100%);
+        padding: 4rem 0;
+        position: relative;
+      }
+
+      /* Section title with bold solid color */
+      .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.75rem;
+        font-weight: 700;
+        color: #dc2626;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        letter-spacing: -0.5px;
+      }
+
+    .main-section button{
+      color:black !important; 
+    }
+
+      /* Simple decorative dots under title */
+      .section-title::after {
+        content: '• • •';
+        display: block;
+        margin-top: 0.75rem;
+        color: #fbbf24;
+        font-size: 1.2rem;
+        letter-spacing: 0.5rem;
+      }
+
+      /* Clean tab navigation */
+      .nav-tabs { 
+        justify-content: center; 
+        gap: 1rem; 
+        margin-bottom: 2rem;
+        border: none;
+      }
+      
+      .nav-tabs .nav-link {
+        background: #ffffff;
+        color: #4b5563;
+        /* color:black; */
+        border: 2px solid #e5e7eb;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      
+      .nav-tabs .nav-link:hover {
+        background: #d71212;
+        border-color: #fca5a5;
+        color: #dc2626;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+      }
+      
+      /* Active tab with solid color */
+      .nav-tabs .nav-link.active {
+        background: #dc2626;
+        color: #ffffff !important;
+        border-color: #dc2626;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+      }
+
+      /* Clean content card */
+      .tab-content {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem !important;
+        border: 2px solid #f3f4f6;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        min-height: 200px;
+        transition: all 0.3s ease;
+      }
+
+      .tab-content:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        border-color: #e5e7eb;
+      }
+      
+      .tab-pane p.lead {
+        margin: 0;
+        color: #6b7280;
+        font-weight: 500;
+        font-size: 1.125rem;
+        text-align: center;
+      }
+
+      /* Simple fade animation */
+      .tab-pane {
+        animation: simpleFade 0.4s ease;
+      }
+      
+      @keyframes simpleFade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        .main-section { padding: 3rem 0; }
+        .section-title { font-size: 2.25rem; }
+        .nav-tabs .nav-link { padding: 0.65rem 1.2rem; font-size: 0.95rem; }
+        .tab-content { padding: 2rem !important; }
+      }
+      
+      @media (max-width: 768px) {
+        .main-section { padding: 2.5rem 0; }
+        .section-title { font-size: 1.875rem; }
+        .nav-tabs { gap: 0.75rem; }
+        .nav-tabs .nav-link { padding: 0.6rem 1rem; font-size: 0.9rem; }
+        .tab-content { padding: 1.75rem !important; }
+      }
+      
+      @media (max-width: 576px) {
+        .main-section { padding: 2rem 0; }
+        .section-title { font-size: 1.5rem; }
+        .nav-tabs { gap: 0.5rem; flex-wrap: wrap; }
+        .nav-tabs .nav-link { padding: 0.5rem 0.875rem; font-size: 0.85rem; }
+        .tab-content { padding: 1.5rem !important; min-height: 160px; }
+        .tab-pane p.lead { font-size: 1rem; }
+      }
+    </style>
+
+  </body>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</html>
